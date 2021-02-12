@@ -38,6 +38,7 @@ jobs:
           username: ${{ secrets.SAUCE_USERNAME }}
           accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
           tunnelIdentifier: sauce-ci-tunnel
+          verbose: true
 
       - name: Install GH Actions Prerequisites
         run: apt-get update && apt-get install -y nodejs zstd git
