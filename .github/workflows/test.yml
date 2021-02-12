@@ -52,5 +52,9 @@ jobs:
       - name: Install Dependencies
         run: gem install bundler && bundle install
 
-      - name: Run tests
-        run: bundle exec rspec spec/features/hello_world_spec.rb
+      - name: start server
+        run: |
+          bin/rails server 
+          curl http://localhost:3000
+     # - name: Run tests
+       # run: bundle exec rspec spec/features/hello_world_spec.rb
