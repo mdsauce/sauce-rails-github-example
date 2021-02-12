@@ -16,7 +16,7 @@ RSpec.configure do |config|
 
   config.before do |test|
     # Configure the server host
-    Capybara.server_host = '0.0.0.0'
+    #Capybara.server_host = '0.0.0.0'
     # Configure the server port
     Capybara.server_port = 3001
     Capybara.app_host = 'http://localhost:3001'
