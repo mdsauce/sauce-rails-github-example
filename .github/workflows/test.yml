@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Run Sauce Connect
-        uses: saucelabs/sauce-connect-action@v1.1.2
+        uses: saucelabs/sauce-connect-action@v1.1.1
         with:
           username: ${{ secrets.SAUCE_USERNAME }}
           accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
@@ -54,7 +54,7 @@ jobs:
 
       - name: start server
         run: |
-          bin/rails server 
+          bin/rails server &
           curl http://localhost:3000
      # - name: Run tests
        # run: bundle exec rspec spec/features/hello_world_spec.rb
